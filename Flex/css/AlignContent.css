@@ -1,0 +1,32 @@
+.StretchContainer {
+    align-content: stretch;
+}
+
+.AlignContentFlexStart {
+    align-content: flex-start;
+}
+
+.AlignContentFlexEnd {
+    align-items: baseline;
+    align-content: flex-end;
+}
+
+.AlignContentCenter {
+    align-content: center;
+}
+
+.AlignContentFirstBaseline {
+    align-content: first baseline;
+}
+
+.AlignContentSpaceAround {
+    align-content: space-around;
+}
+
+.AlignContentSpaceBetween {
+    align-content: space-between;
+}
+
+.AlignContentSpaceAround {
+    align-content: space-around;
+}

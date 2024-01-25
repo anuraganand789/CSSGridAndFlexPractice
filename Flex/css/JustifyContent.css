@@ -1,0 +1,27 @@
+.JustifyContentFlexStart {
+    justify-content: flex-start;
+}
+
+.JustifyContentFlexEnd {
+    justify-content: flex-end;
+}
+
+.JustifyContentCenter {
+    justify-content: center;
+}
+
+.JustifyContentEnd {
+    justify-content: end;
+}
+
+.JustifyContentSpaceAround {
+    justify-content: space-around;
+}
+
+.JustifyContentSpaceBetween {
+    justify-content: space-between;
+}
+
+.JustifyContentSpaceEvenly {
+    justify-content: space-evenly;
+}

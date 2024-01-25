@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Container Practice</title>
+</head>
+<body>
+    <div class="Container">
+        <div class="Item">1</div>
+        <div class="Item">2</div>
+        <div class="Item">3</div>
+        <div class="Item">4</div>
+    </div>
+
+    <div class="InlineContainer">
+        <div class="Item">1</div>
+        <div class="Item">2</div>
+        <div class="Item">3</div>
+        <div class="Item">4</div>
+    </div>
+</body>
+
+<style>
+    *{
+        margin  : 0;
+        padding : 0;
+    }
+
+    body {
+        height              : 100vh;
+        width               : 100vw;
+        background-color    : aquamarine;
+        overflow: hidden;
+    }
+
+    .Container, .InlineContainer{
+        margin-left         : 10%;
+        margin-top          : 24px;
+        background-color    : #fff;
+        border-radius       : 4px;
+    }
+    
+    .Item {
+        border              :   2px solid #fff;
+        background-color    :   blue;
+        padding             :   16px 24px;
+        color               :   #fff;
+        border-radius: 6px;
+    }
+
+    .Container {
+        display: flex;
+    }
+
+    .InlineContainer {
+        display: inline-flex;
+    }
+
+</style>
+</html>

@@ -1,0 +1,38 @@
+.AlignItemsStretch {
+    align-items: stretch;
+}
+
+.AlignItemsFlexStart {
+    align-items: flex-start;
+}
+
+.AlignItemsFlexEnd {
+    align-items: flex-end;
+}
+
+.AlignItemsCenter {
+    align-items: center;
+}
+
+.AlignItemsFirstBaseline {
+    align-items :   first baseline;
+}
+
+.AlignItemsLastBaseline {
+    align-items :   last baseline;
+}
+
+.AlignItemsBaseline {
+    align-items :   baseline;
+}
+
+.AlignItemsSafeCenter {
+    align-items :   safe center;
+}
+
+.AlignItemsUnsafeCenter {
+    align-items :   unsafe center;
+}
+
+
+

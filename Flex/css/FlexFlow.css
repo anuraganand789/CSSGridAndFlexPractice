@@ -1,0 +1,19 @@
+.RowWrapReverse {
+    flex-flow: row wrap-reverse;
+}
+
+.ColumnNoWrap {
+    flex-flow: column nowrap;
+}
+
+.RowReverseWrap {
+    flex-flow   :   row-reverse wrap;
+}
+
+.ColumnReverseWrap {
+    flex-flow: column-reverse wrap;
+}
+
+.RowReverseWrapReverse {
+    flex-flow: row-reverse wrap-reverse;
+}
