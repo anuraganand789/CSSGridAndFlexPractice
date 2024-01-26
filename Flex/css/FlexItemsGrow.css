@@ -1,0 +1,27 @@
+.item {
+    width : 50px;
+    height : 300px;
+}
+
+.NoItemsGrow .item {
+    flex-grow: 0;
+}
+
+.AllItemsGrow .item {
+    flex-grow: 1;
+}
+
+.FirstItemGrow .item:first-of-type {
+    flex-grow : 1;
+}
+
+.ThirdItemGrow .item:nth-of-type(3) {
+    flex-grow : 1;
+}
+
+.MultipleItemsGrow .item:nth-of-type(2){
+    flex-grow: 2;
+}
+.MultipleItemsGrow .item:last-of-type {
+    flex-grow: 1;
+}

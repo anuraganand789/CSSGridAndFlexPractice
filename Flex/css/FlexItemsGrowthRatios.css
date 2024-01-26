@@ -1,0 +1,32 @@
+.SameRatio .item{
+    flex-grow: 2;
+}
+
+.OneOneTwo {
+    & .item {
+        flex-grow: 1;
+    }
+    & .item:nth-child(3) {
+        flex-grow: 2;
+    }
+}
+
+.OneOneThree {
+    & .item {
+        flex-grow: 0;
+    }
+    & .item:nth-child(3) {
+        flex-grow: 3;
+    }
+}
+
+
+.TwoOneTwo {
+    & .item {
+        flex-grow : 1;
+    }
+    
+    & .item:nth-of-type(odd) {
+        flex-grow : 2;
+    }
+}

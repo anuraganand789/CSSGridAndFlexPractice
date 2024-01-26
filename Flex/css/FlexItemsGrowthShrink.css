@@ -1,0 +1,28 @@
+.item {
+    width : 100px;
+}
+
+.AllShrinkContainer .item {
+    flex-shrink: 1;
+}
+
+.AllNoShrinkContainer .item {
+    flex-shrink: 0;
+}
+
+.FirstShrink .item {
+    flex-shrink: 0;
+
+    &:first-of-type {
+        flex-shrink: 1;
+    }
+}
+
+.ItemCanStillShrink .item {
+    flex-basis: 100px;
+    flex-shrink: 0;
+
+    &:first-of-type {
+        flex-shrink: 1;
+    }
+}
