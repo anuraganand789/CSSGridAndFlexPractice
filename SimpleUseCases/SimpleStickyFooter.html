@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Sticky Footer</title>
+</head>
+<body>
+    <div class="Header">Header</div>
+    <div class="Body">Main section</div>
+    <div class="Footer">Footer</div>
+</body>
+<style>
+    * {
+        margin      :   0;
+        padding     :   0;
+        box-sizing  :   border-box;
+    }
+
+    body {
+        background-color    : rgb(127, 208, 255);
+        height: 100vh;
+        width: 100%;
+
+        display             : flex;
+        flex-direction: column;
+    }
+
+    .Body {
+        background-color: #fff;
+        flex-grow: 9;
+    }
+    .Header, .Footer {
+        background-color: blue;
+        flex-grow: 1;
+    }
+
+</style>
+</html>

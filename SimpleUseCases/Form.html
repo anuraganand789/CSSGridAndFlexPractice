@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Alignment</title>
+</head>
+<body>
+    <div class="Container">
+        <form action="javascript:void(0)">
+            <h3>Register Form</h3>
+            <div class="FieldRow">
+                <label for="Email">Email</label>
+                <input type="text" name="Email" id="Email" placeholder="Email">
+            </div>
+            <div class="FieldRow">
+                <label for="FirstName">First Name</label>
+                <input type="text" name="FirstName" id="FirstName" placeholder="FirstName">
+            </div>
+            <div class="FieldRow">
+                <label for="LastName">Last Name</label>
+                <input type="text" name="LastName" id="LastName" placeholder="LastName">
+            </div>
+            <div class="FieldRow">
+                <label for="Deposit">Deposit ($)</label>
+                <input type="text" name="Deposit" id="Deposit" placeholder="Deposit ($)">
+            </div>
+            <div class="FieldRow">
+                <label for="Comment">Comment</label>
+                <textarea name="Comment" id="Comment" cols="30" rows="7"></textarea>
+            </div>
+
+            <button name="Submit">Submit</button>
+        </form>
+    </div>
+</body>
+<style>
+    * {
+        margin      :   0;
+        padding     :   0;
+        box-sizing  :   border-box;
+    }
+
+    body {
+        background-color    : rgb(127, 208, 255);
+        display             : flex;
+        align-items         : center;
+        justify-content     : center;
+        height: 100vh;
+        width: 100%;
+
+        font-family: sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .Container {
+        background-color: aliceblue;
+        width: 900px;
+        height: 900px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & form {
+            border : 2px solid grey;
+            width: 424px;
+            height: 356px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 4px;
+            padding: 8px;
+
+            border-radius: 4px;
+
+            h3 {
+                color : rgb(30, 30, 164);
+                font-size: 14px;
+                font-weight: 700;
+            }
+
+            & .FieldRow {
+                flex-grow: 1;
+                width : 90%;
+                background-color: rgba(244, 230, 230, 0.701);
+
+                display: flex;
+                align-items: center;
+                padding-left: 4px;
+                padding-right: 4px;
+                justify-content: space-between;  
+                              
+                & label {
+                    width: 25%;
+                    
+                    &:has(+ textarea) {
+                        align-self: flex-start;
+                    }
+                }
+
+                & input, & textarea {
+                    width: 75%;
+                }
+
+                & input {
+                    padding :   4px;
+                    font-size: 12px;
+                }
+            }
+
+            button {
+                align-self: flex-start;
+                padding : 4px 2px;
+                color : white;
+                background-color: rgb(80, 80, 185);
+                margin-left: 18px;
+                border-radius: 4px;
+                border : 0;
+            }
+        }
+    }
+</style>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Gotchas</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+    <div class="container AutoZeroContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    
+    <div class="container MaxWidthContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <div class="container MinWidthContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    
+    <div class="container MaxHeightContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <div class="container MinHeightContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+<style>
+    .AutoZeroContainer .item {
+        flex-basis : 0;
+        width : 70px;
+
+        &:first-of-type {
+            flex-basis : auto;
+        }
+    }
+
+    .MaxWidthContainer .item {
+        max-width   : 70px;
+        flex-basis  :   80px;
+        flex-shrink : 0;
+
+    }
+
+    .MinWidthContainer .item {
+        min-width: 70px;
+        flex-basis: 60px;
+    }
+
+    .MaxHeightContainer, .MinHeightContainer {
+        flex-direction: column;
+    }
+
+    .MaxHeightContainer .item {
+        max-height: 70px;
+        flex-basis: 80px;
+        flex-shrink: 0;
+    }
+
+    .MinHeightContainer .item {
+        min-height: 70px;
+        flex-basis: 60px;
+    }   
+</style>
+</html>

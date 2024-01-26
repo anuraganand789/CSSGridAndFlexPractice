@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Side Bar</title>
+</head>
+<body>
+    <div class="Container">
+        <div class="Column">Side Bar Content</div>
+        <div class="Column">
+            <H4>Page Heading</H4>
+            <p>some page content</p>
+            <p>some page content</p>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        margin      :   0;
+        padding     :   0;
+        box-sizing  :   border-box;
+    }
+
+    body {
+        background-color    : rgb(127, 208, 255);
+        display             : flex;
+        align-items         : center;
+        justify-content     : center;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .Container {
+        background-color: aliceblue;
+        width: 900px;
+        height: 900px;
+
+        display: flex;
+        gap: 2px;
+
+        & .Column {
+            &:first-of-type {
+                color : #fff;
+                flex-grow: .5;        
+                background-color: blue;
+            }
+
+            &:last-of-type {
+                flex-grow: 3;
+            }
+        }
+    }
+</style>
+</html>
