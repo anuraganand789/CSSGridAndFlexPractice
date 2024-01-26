@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Layout</title>
+</head>
+<body>
+    <div class="BorderLayout">
+        <div class="Header">
+            <h3>Header</h3>
+        </div>
+
+        <div class="Body">
+            <div class="BodyLeft"><h4>Navigation</h4></div>
+            <div class="MainSection"><h4>Main Section</h4></div>
+            <div class="BodyRight">Aside</div>
+        </div>
+
+        <div class="Footer"><h4>Footer</h4></div>
+    </div>
+</body>
+<style>
+    * {
+        margin      : 0;
+        padding     : 0;
+        box-sizing  : border-box;
+    }
+
+    body {
+        width   : 100vw;
+        height  : 100vh;
+    }
+
+    div {
+        border : 1px solid black;
+    }
+
+    .BorderLayout {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+    }
+
+    .Header, .Footer {
+        flex-grow: 1;
+    }
+    .Body {
+        display: flex;
+        flex-grow: 15;
+
+        & .BodyLeft, & .BodyRight {
+            flex-grow : 1;
+        }
+        & .MainSection {
+            flex-grow : 12
+        }
+    }
+
+
+</style>
+</html>
