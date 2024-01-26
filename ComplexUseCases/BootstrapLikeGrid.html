@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid System</title>
+</head>
+<body>
+    <div class="FluidContainer">
+        <div class="Row">
+            <div class="Col12">1</div>
+        </div>
+        <div class="Row">
+            <div class="Col11">11/12</div>
+            <div class="Col1">1/12</div>
+        </div>
+        <div class="Row">
+            <div class="Col5">5/6</div>
+            <div class="Col1">1/6</div>
+        </div>
+        <div class="Row">
+            <div class="Col3">3/4</div>
+            <div class="Col1">1/4</div>
+        </div>
+        <div class="Row">
+            <div class="Col2">2/3</div>
+            <div class="Col1">1/3</div>
+        </div>
+        <div class="Row">
+            <div class="Col7">7/12</div>
+            <div class="Col5">5/12</div>
+        </div>
+        <div class="Row">
+            <div class="Col1">1/2</div>
+            <div class="Col1">1/2</div>
+        </div>
+        <div class="Row">
+            <div class="Col5">5/12</div>
+            <div class="Col5">5/12</div>
+            <div class="Col1">1/6</div>
+        </div>
+        <div class="Row">
+            <div class="Col1">1/3</div>
+            <div class="Col1">1/3</div>
+            <div class="Col1">1/3</div>
+        </div>
+        <div class="Row">
+            <div class="Col1">1/4</div>
+            <div class="Col1">1/4</div>
+            <div class="Col1">1/4</div>
+            <div class="Col1">1/4</div>
+        </div>
+        <div class="Row">
+            <div class="Col1">1/6</div>
+            <div class="Col1">1/6</div>
+            <div class="Col1">1/6</div>
+            <div class="Col1">1/6</div>
+            <div class="Col1">1/6</div>
+            <div class="Col1">1/6</div>
+            
+        </div>
+        <div class="Row">
+            <div class="Col1">1/12</div>
+            <div class="Col1">1/12</div>
+            <div class="Col1">1/12</div>
+            <div class="Col1">1/12</div>
+            <div class="Col1">1/12</div>
+            <div class="Col1">1/12</div>
+            <div class="Col1">1/12</div>
+            <div class="Col1">1/12</div>
+            <div class="Col1">1/12</div>
+            <div class="Col1">1/12</div>
+            <div class="Col1">1/12</div>
+            <div class="Col1">1/12</div>
+        </div>
+    </div>
+</body>
+
+<style>
+    * {
+        margin : 0;
+        padding : 0;
+        box-sizing : border-box;
+    }
+
+    body {
+        background-color: deepskyblue;
+        height : 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .FluidContainer {
+        width : 90%;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        
+        .Row {
+            background-color: hsl(240, 50%, 32%);
+            color: #fff;
+            display: flex;
+            
+            & > [class^="Col"] {
+                border : 1px solid #fff;
+                flex-grow: 0;
+                padding : 12px;
+            }
+            
+            & .Col1 {
+                text-align: center;
+                flex-grow : 1;
+            }
+
+            & .Col2 {
+                text-align: center;
+                flex-grow : 2;
+            }
+
+            & .Col3 {
+                text-align: center;
+                flex-grow : 3;
+            }
+            & .Col4 {
+                text-align: center;
+                flex-grow : 4;
+            }
+
+            & .Col5 {
+                text-align: center;
+                flex-grow : 5;
+            }
+
+            & .Col6 {
+                text-align: center;
+                flex-grow : 6;
+            }
+
+            & .Col7 {
+                text-align: center;
+                flex-grow : 7;
+            }
+
+            & .Col8 {
+                text-align: center;
+                flex-grow : 8;
+            }
+
+            & .Col9 {
+                text-align: center;
+                flex-grow : 9;
+            }
+
+            & .Col10 {
+                text-align: center;
+                flex-grow : 10;
+            }
+
+            & .Col11 {
+                text-align: center;
+                flex-grow : 11;
+            }
+
+            & .Col12 {
+                text-align: center;
+                flex-grow : 12;
+            }
+        }
+    }
+</style>
+</html>
