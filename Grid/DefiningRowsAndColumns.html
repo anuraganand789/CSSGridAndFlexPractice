@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+</head>
+<body>
+    <div class="Container TwoColumnContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <div class="Container JustRowsContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <div class="Container TwoByTwoContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <div class="Container FourByOneContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <div class="Container JustColumnsContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <div class="Container UnnecessaryColumnsContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <div class="Container UnnecessaryRowsContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+
+<style>
+
+    * {
+        border : 0;
+        padding : 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color    :   cornflowerblue;
+        height : 100vh;
+    }
+
+    .Container {
+        color : #fff;
+        background-color: #fff;
+        padding: 2px;
+        display: grid;
+        gap: 2px;
+        &:not(:first-of-type) { margin-top : 8px; }
+    }
+    
+    
+    .item {
+        background-color: navy;
+        padding: 16px;        
+    }
+
+    .TwoColumnContainer {
+        grid-template-columns: repeat(2, 200px);
+    }
+
+    .JustRowsContainer {
+        grid-template-rows: 100px 100px 100px 100px;
+    }
+
+    .TwoByTwoContainer {
+        grid-template-columns: 200px 200px;
+        grid-template-rows      :   100px 100px;
+    }
+
+    .FourByOneContainer {
+        grid-template-columns: 200px 200px 200px 200px;
+        grid-template-rows: 100px;
+    }
+    
+    .JustColumnsContainer {
+        grid-template-columns: 200px 200px 200px 200px;
+    }
+
+    .UnnecessaryColumnsContainer {
+        grid-template-columns: 200px 200px 200px 200px 200px;    
+    }
+
+    .UnnecessaryRowsContainer {
+
+        height : 500px;
+        margin-bottom: 150px;
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 200px 200px 200px;
+    }
+
+</style>
+</html>

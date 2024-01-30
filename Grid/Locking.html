@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Web Design</title>
+</head>
+<body>
+    <div class="Container">
+        <div class="Item">1</div>
+        <div class="Item">2</div>
+        <div class="Item">3</div>
+        <div class="Item">4</div>
+    </div>
+</body>
+<style>
+    * {
+        padding     : 0;
+        margin      : 0;
+        border      : 0;
+        box-sizing  : border-box;
+    }
+
+    body {
+        background-color: beige;
+        height : 100vh;
+    }
+
+    .Container {
+        background-color: #fff;
+        margin-left : 10%;
+        margin-top : 10%;
+        width : 80%;
+
+        display: grid;
+        gap : 1px;
+        grid-template-columns : [a] 1fr [b c] 1fr [b d] 1fr [b d] ;
+        grid-template-rows : [a] 100px [a] 100px [a];
+    }
+
+    .Item {
+        container-type: size;
+        background-color : bisque;
+        text-align: center;
+        padding : 8px;
+    }
+
+    .Container {
+        & .Item:first-of-type {
+            grid-area           : a 1 / a 1 / a 3 / b 1;
+            background-color    : darkcyan;
+        }
+
+        & .Item:nth-of-type(2) {
+            grid-area           : a 1 / c 1 / a 1 / b 3;
+            background-color    : darkorange;
+        }
+
+        & .Item:nth-of-type(3) {
+            grid-area   :  a 2 / c 1 / a 3 / b 2;
+            background-color : skyblue;
+        }
+
+        & .Item:last-of-type {
+            grid-area   :  a 2 / b 2 / a 2 / b 3;
+            background-color : thistle;
+        }
+    }
+</style>
+</html>

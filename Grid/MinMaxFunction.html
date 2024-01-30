@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+</head>
+<body>
+
+    <div class="Container FixedMinMaxColumnContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <div class="Container FixedMinMaxRowContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <div class="Container FixedPercentageMinMaxColumnContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <div class="Container FixedFractionMinMaxColumnContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+   
+</body>
+
+<style>
+
+    * {
+        border : 0;
+        padding : 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color    :   cornflowerblue;
+        height : 100vh;
+    }
+
+    .Container {
+        color : #fff;
+        background-color: #fff;
+        padding: 2px;
+        display: grid;
+        gap: 2px;
+
+        &:not(:first-of-type) { margin-top : 8px; }
+    }
+        
+    .item {
+        background-color: navy;
+        padding: 16px;        
+    }
+
+    .FixedMinMaxColumnContainer {
+        grid-template-columns   :   minmax(200px, 400px) 100px;
+    }
+
+    .FixedMinMaxRowContainer {
+        height : 400px;
+        grid-template-columns : 1fr 1fr;
+        grid-template-rows : minmax(100px, 200px) 150px;
+    }
+
+    .FixedPercentageMinMaxColumnContainer {
+        grid-template-columns : minmax(20%, 40%) 200px;
+    }
+
+    .FixedFractionMinMaxColumnContainer {
+        grid-template-columns   :   minmax(100px, 1fr) 1fr;
+    }
+</style>
+</html>

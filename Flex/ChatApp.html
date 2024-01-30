@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App Design</title>
+</head>
+<body>
+    <div class="Container">
+        <div class="Sidebar">
+            <div class="SearchBar">
+                <div class="SearchIcon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="text" name="Search" id="Search" placeholder="Search">
+            </div>
+            <div class="Profiles">
+                <div class="Profile Active">
+                    <img src="ManInJacketWithDarkBackground.avif" alt="">
+                    <div class="ProfileAndMessageSample">
+                        <span class="ProfileName">Daryl Duckemanton</span>
+                        <span class="Message">Ok then</span>
+                    </div>
+                    <span class="MessageDate">Apr 16</span>
+                </div>
+                <div class="Profile">
+                    <img src="WomenRedTurtleNeck.avif" alt="">
+                    <div class="ProfileAndMessageSample">
+                        <span class="ProfileName">kim O'Neil</span>
+                        <span class="Message">Very Funny</span>
+                    </div>
+                    <span class="MessageDate">2 days ago</span>
+                </div>
+                <div class="Profile">
+                    <img src="ManInHat.avif" alt="">
+                    <div class="ProfileAndMessageSample">
+                        <span class="ProfileName">John Anderson</span>
+                        <span class="Message">Yes I love how Python does that</span>
+                    </div>
+                    <span class="MessageDate">1 week ago</span>
+                </div>
+                <div class="Profile">
+                    <img src="WomenInJacket.avif" alt="">
+                    <div class="ProfileAndMessageSample">
+                        <span class="ProfileName">Ben Smith</span>
+                        <span class="Message">Yeah Miami heat are done</span>
+                    </div>
+                    <span class="MessageDate">2:49 PM</span>
+                </div>
+                <div class="Profile">
+                    <img src="ManSitting.avif" alt="">
+                    <div class="ProfileAndMessageSample">
+                        <span class="ProfileName">Jacob Manly</span>
+                        <span class="Message">Just be very careful doing that</span>
+                    </div>
+                    <span class="MessageDate">3 mins ago</span>
+                </div>
+                <div class="Profile">
+                    <img src="Man.avif" alt="">
+                    <div class="ProfileAndMessageSample">
+                        <span class="ProfileName">Douglas Johansman</span>
+                        <span class="Message">No it does not</span>
+                    </div>
+                    <span class="MessageDate">6:14 pm</span>
+                </div>
+                <div class="Profile">
+                    <img src="WomanLookingLeft.avif" alt="">
+                    <div class="ProfileAndMessageSample">
+                        <span class="ProfileName">Stacey Wilson</span>
+                        <span class="Message">Awesome!!! Congratulations!!!</span>
+                    </div>
+                    <span class="MessageDate">33 mins ago</span>
+                </div>
+                <div class="Profile">
+                    <img src="ManOnPhone.avif" alt="">
+                    <div class="ProfileAndMessageSample">
+                        <span class="ProfileName">Stan George</span>
+                        <span class="Message">Good job</span>
+                    </div>
+                    <span class="MessageDate">1 week ago</span>
+                </div>
+            </div>
+            <div class="Footer">
+                <div class="Add"><i class="fa-solid fa-plus"></i></div>
+            </div>
+        </div>
+        <div class="ChatMessages">
+            <div class="Header">
+                <div class="UserName">Daryl Duckmanton</div>
+                <div class="DeleteIcon"><i class="fa-solid fa-trash"></i></div>
+            </div>
+            <div class="Chats">
+                <div class="Chat Reply">
+                    <span class="Text">How's it going?</span>
+                    <span class="Date"> Apr 13</span>
+                </div>
+                <div class="Chat Response">
+                    <img src="ManInJacketWithDarkBackground.avif" alt="">
+                    <div class="MessageGroup">
+                        <span class="Text">
+                            I'm just in the process of finishing off the last pieces of material for te course.
+                        </span>
+                        <span class="Date"> Apr 14</span>
+                    </div>
+                </div>
+                <div class="Chat Reply">
+                    <span class="Text">
+                        Well we need to work out sometime soon where we really want to record our video course.
+                    </span>
+                    <span class="Date"> Apr 15</span>
+                </div>
+                <div class="Chat Response">
+                    <img src="ManInJacketWithDarkBackground.avif" alt="">
+                    <div class="MessageGroup">
+                        <span class="Text">
+                            All I know is where I live it's too hard to record, because of all the street noise.
+                        </span>
+                        <span class="Date"> Apr 15</span>
+                    </div>
+                </div>
+                <div class="Chat Reply">
+                    <span class="Text">
+                        Maybe we can use Jim's studio.
+                    </span>
+                    <span class="Date"> Apr 16</span>
+                </div>
+                <div class="Chat Response">
+                    <img src="ManInJacketWithDarkBackground.avif" alt="">
+                    <div class="MessageGroup">
+                        <span class="Text">
+                            Yeah I think it's the best we do that. Otherwise things won't work.
+                        </span>
+                        <span class="Date"> Apr 16</span>
+                    </div>
+                </div>
+                <div class="Chat Reply">
+                    <span class="Text">
+                        Ok then
+                    </span>
+                    <span class="Date"> Apr 17</span>
+                </div>
+            </div>
+            <div class="Footer">
+                <div class="AttachmentIcon">
+                    <i class="fa-solid fa-paperclip"></i>
+                </div>
+                <textarea type="text" id="TypingBox" 
+                name="TypingBox" class="TypingBox" placeholder="type a message"
+                rows="2" cols="76"
+                ></textarea>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<style>
+    @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css);
+
+    * {
+        margin      : 0;
+        padding     : 0;
+        box-sizing  :   border-box;
+    }
+
+    body {
+        background-color: rgb(57, 127, 218);
+        height: 100vh;
+        font-family: sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Container {
+        display: flex;
+        width: 900px;
+
+        & .Sidebar {
+            display             :   flex;
+            flex-direction      :   column;
+            gap                 :   8px;
+            background-color    :   rgb(40, 40, 151);
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            /* padding             :   16px; */
+
+            & .SearchBar{
+                display: flex;
+                padding-top     : 10px;
+                padding-left    :   12px;
+                padding-right   :   12px;
+
+                &:hover {
+                    & .SearchIcon i {
+                        color : rgb(148, 28, 28);
+                    }
+                }
+
+                & .SearchIcon {
+                    background-color: rgb(72, 107, 173);
+
+                    & i {
+                        padding : 8px;
+                        color : #fff;
+                    }
+                }
+                
+                & input {
+                    flex-grow: 1;
+                    background-color: rgb(72, 107, 173);
+                    color           :   #fff;
+                    padding-left    :   8px;
+                    border: none;
+                    cursor          : pointer;
+
+                    &:focus { outline : none ;}
+
+                    &::placeholder {
+                        color       :   #fff;
+                    }
+                }
+            }
+
+            & .Profiles {
+                display: flex;
+                flex-direction: column;
+                gap         :   4px;
+
+                & .Profile {
+                    display     : flex;
+                    gap         :   8px;
+                    color       :   #fff;
+                    padding     :   12px;
+                    cursor      :   pointer;
+
+                    &.Active, &:hover {
+                        background-color    :   hsla(240, 72%, 25%, 1);
+                    }
+
+                    & > img {
+                        width           : 32px;
+                        height          : 32px;
+                        border-radius   : 50%;;
+                    }
+
+                    & .ProfileAndMessageSample {
+                        display         :   flex;
+                        flex-direction  :   column;
+                        flex-grow       :   1;
+                        gap             :   2px;
+
+                        & .ProfileName {
+                            font-size       : 12px;
+                            font-weight     : 600;
+                        }
+
+                        & .Message {
+                            font-size       : 10px;
+                        }
+
+                    }
+
+                    & .MessageDate {
+                        font-size   :   8px;
+                        font-weight :   400;
+                    }
+                }
+            }
+
+            .Footer {
+                padding : 12px;
+                background-color: navy;
+                border-bottom-left-radius: 4px;
+
+
+                & .Add {
+                    background-color    : #fff;
+                    width               :   28px;
+                    height              :   28px;
+                    border-radius       :   50%;
+                    text-align          :   center;
+                    cursor              :   pointer;
+
+                    &:hover {
+                        & i {
+                            font-size: 18px;
+                        }
+                    }
+
+                    & i {
+                        font-size: 14px;
+                        line-height: 28px;
+                        transition : .2s;
+                    }
+                }
+            }
+        }
+
+        & .ChatMessages {
+            background-color: #fff;
+            flex-grow: 1;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+
+            display         : flex;
+            flex-direction  : column;
+            
+            & .Header {
+                background-color    : rgb(247, 227, 207);
+                display             : flex;
+                justify-content     : space-between;
+                align-items         : center;
+                padding             : 18px 24px;
+                border-top-right-radius: 4px;
+                box-shadow: 0 2px 0px rgb(235, 220, 203);
+                
+                & .UserName {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color : rgb(23, 112, 202);
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                
+                & .DeleteIcon {
+                    cursor: pointer;
+                    
+                    & i {
+                        font-size: 24px;
+                        color : rgb(23, 112, 202);
+                        &:hover {
+                            color : red;
+                        }
+                    }
+                }
+            }
+
+            & .Chats {
+                flex-grow: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 8px;
+
+                & .Chat {
+                    font-size: 12px;
+                    max-width: 350px;
+                    display: flex;
+                    flex-direction: column;
+                    gap             :   4px;
+
+                    & .Text {
+                        border-radius: 8px;
+                        display: inline-block;
+                        padding: 8px;
+                    }
+
+                    & .Date {
+                        align-self: flex-end;
+                        font-size: 10px;
+                    }
+
+                    & img {
+                        width : 48px;
+                        height : 48px;
+                        border-radius: 50%;
+                    }
+                }
+                
+                & .Reply {
+                    align-self          : flex-end;
+                    
+                    
+                    & .Text {
+                        border-bottom-right-radius: 0;
+                        color               :  #fff;
+                        background-color    : rgb(23, 112, 202);
+                    }
+
+                    & .Date {
+                        align-self: flex-end;
+                    }
+
+                }
+                
+                & .Response {
+                    flex-direction: row;
+                    border-bottom-left-radius: 0;
+                    
+                    & .Text {
+                        background-color: blanchedalmond;
+                        border-bottom-left-radius: 0;
+                    }
+
+                    .Date {
+                        align-self: flex-start;
+                        font-size: 10px;
+                    }
+                }
+            }
+            
+            & .Footer {
+                background-color    : rgb(247, 227, 207);
+                box-shadow: 0 -2px 0px rgb(235, 220, 203);
+                border-bottom-right-radius: 4px;
+                padding : 18px;
+                display : flex;
+                align-items: center;
+                gap: 8px;
+
+                & .AttachmentIcon{
+                    font-size: 28px;
+                    color : rgb(23, 112, 202);
+                    cursor: pointer;
+
+                    &:hover {
+                        color : red;
+                    }
+                }
+
+                & .TypingBox {
+                    padding: 8px;
+                    flex-grow: 1;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+</style>
+</html>

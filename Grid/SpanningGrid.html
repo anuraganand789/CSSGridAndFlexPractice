@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanning Grid</title>
+</head>
+<body>
+    <header>Header Section</header>
+    <div class="VideoPlaySection">Video Play Section</div>
+    <div class="VideoTitleSection">Video TitleSection</div>
+    <div class="VideoCommentSection">Video Comments Section</div>
+    <div class="RelatedVideoSection">Related Video Section</div>
+    <footer>Footer Section</footer>
+</body>
+<style>
+
+    body {
+        display                 : grid;
+        grid-template-columns   : 1fr 250px;
+        grid-template-rows      : max-content 480px max-content 1fr max-content;
+        grid-template-areas     : 
+        "Header Header"
+        "VideoPlayer RelatedVideos"
+        "VideoTitle RelatedVideos"
+        "Comments RelatedVideos"
+        "Footer Footer"
+        ;
+        height : 100vh;
+    }
+
+
+    div, header, footer {
+        border : 1px solid black;
+    }
+
+    header {
+        grid-area: Header;
+    }
+
+    footer {
+        grid-area : Footer;
+    }
+
+    .RelatedVideoSection {
+        grid-area : RelatedVideos;
+    }
+
+    .VideoPlaySection {
+        grid-area : VideoPlayer;
+    }
+
+    .VideoCommentSection {
+        grid-area : Comments;
+    }
+
+    .VideoTitleSection {
+        grid-area : VideoTitle;
+    }
+</style>
+</html>

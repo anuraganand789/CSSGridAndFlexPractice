@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reordering Grid Items</title>
+</head>
+<body>
+    <div class="Container ItemOneToLastRowContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div>
+        <div class="Item">4</div><div class="Item">5</div><div class="Item">6</div>
+        <div class="Item">7</div><div class="Item">8</div>
+    </div>
+    <div class="Container ItemSevenToFirstRowContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div>
+        <div class="Item">4</div><div class="Item">5</div><div class="Item">6</div>
+        <div class="Item">7</div><div class="Item">8</div>
+    </div>
+    <div class="Container ItemThreeToSeconsRowContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div>
+        <div class="Item">4</div><div class="Item">5</div><div class="Item">6</div>
+        <div class="Item">7</div><div class="Item">8</div>
+    </div>
+    <div class="Container ItemSixToFirstRowContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div>
+        <div class="Item">4</div><div class="Item">5</div><div class="Item">6</div>
+        <div class="Item">7</div><div class="Item">8</div>
+    </div>
+    <div class="Container ItemMultipleItemsToLastRow">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div><div class="Item">4</div>
+        <div class="Item">5</div><div class="Item">6</div><div class="Item">7</div><div class="Item">8</div>
+    </div>
+
+    <div class="Container ItemMultipleItemsToFirstRow">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div><div class="Item">4</div>
+        <div class="Item">5</div><div class="Item">6</div><div class="Item">7</div><div class="Item">8</div>
+    </div>
+</body>
+<style>
+    *{
+        margin:0;
+        padding :0;
+        border : 0;
+        outline : 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: cornsilk;
+        height : 2000px;
+    }
+
+    .Container {
+        background-color : #fff;
+        margin-top: 24px;
+        margin-left : 76px;
+        width : 90%;
+        display : grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 70px);
+        gap : 1px;
+    }
+
+    .Item {
+        background-color : burlywood;
+        padding : 12px;
+    }
+
+    .ItemOneToLastRowContainer > .Item:first-of-type {
+        background-color: coral;
+        grid-row-start : 2;
+    }
+
+    .ItemSevenToFirstRowContainer > .Item:nth-of-type(7) {
+        background-color: coral;
+        grid-row-end : 2;
+
+    }
+
+    .ItemThreeToSeconsRowContainer > .Item:nth-of-type(3){
+        background-color: coral;
+        grid-row-start : -2;
+    }
+
+    .ItemSixToFirstRowContainer > .Item:nth-of-type(6) {
+        background-color: coral;
+        grid-row-start : -3;
+    }
+
+    .ItemMultipleItemsToLastRow > .Item:first-of-type, 
+    .ItemMultipleItemsToLastRow > .Item:nth-of-type(2){
+        background-color: coral;
+        grid-row-start : 2;
+
+    }
+
+    .ItemMultipleItemsToFirstRow > .Item:nth-of-type(7), 
+    .ItemMultipleItemsToFirstRow > .Item:nth-of-type(8){
+        background-color: coral;
+        grid-row-start : 1;
+
+    }
+</style>
+</html>

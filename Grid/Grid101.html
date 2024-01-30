@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+</head>
+<body>
+    <div class="Container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <div class="InlineContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+</body>
+
+<style>
+
+    * {
+        border : 0;
+        padding : 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color    :   cornflowerblue;
+        height : 100vh;
+    }
+
+    .Container, .InlineContainer {
+        color : #fff;
+        background-color: #fff;
+    }
+    
+    
+    .item {
+        background-color: navy;
+        padding: 16px;
+    }
+
+    .Container {
+        display: grid;
+    }
+
+    .InlineContainer {
+        margin-top: 24px;
+        display: inline-grid;
+    }
+</style>
+</html>

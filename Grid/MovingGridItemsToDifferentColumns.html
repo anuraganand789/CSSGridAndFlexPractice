@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reordering Grid Items</title>
+</head>
+<body>
+    <div class="Container ItemOneToSecondColumnContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div>
+        <div class="Item">4</div><div class="Item">5</div><div class="Item">6</div>
+        <div class="Item">7</div><div class="Item">8</div>
+    </div>
+    <div class="Container ItemOneToThirdColumnContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div>
+        <div class="Item">4</div><div class="Item">5</div><div class="Item">6</div>
+        <div class="Item">7</div><div class="Item">8</div>
+    </div>
+    <div class="Container ItemOneToFourthColumnContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div>
+        <div class="Item">4</div><div class="Item">5</div><div class="Item">6</div>
+        <div class="Item">7</div><div class="Item">8</div>
+    </div>
+    <div class="Container ItemThreeToFirstColumnContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div>
+        <div class="Item">4</div><div class="Item">5</div><div class="Item">6</div>
+        <div class="Item">7</div><div class="Item">8</div>
+    </div>
+    <div class="Container ItemFourToSecondColumnContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div><div class="Item">4</div>
+        <div class="Item">5</div><div class="Item">6</div><div class="Item">7</div><div class="Item">8</div>
+    </div>
+
+    <div class="Container ItemOneToLastColumnUsingNegatives">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div><div class="Item">4</div>
+        <div class="Item">5</div><div class="Item">6</div><div class="Item">7</div><div class="Item">8</div>
+    </div>
+</body>
+<style>
+    *{
+        margin:0;
+        padding :0;
+        border : 0;
+        outline : 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: cornsilk;
+        height : 2000px;
+    }
+
+    .Container {
+        background-color : #fff;
+        margin-top: 8px;
+        margin-left : 76px;
+        width : 90%;
+        display : grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 70px);
+        gap : 2px;
+    }
+
+    .Item {
+        background-color : burlywood;
+        padding : 12px;
+    }
+
+    .ItemOneToSecondColumnContainer > .Item:first-of-type {
+        grid-column-start: 2;
+    }
+    
+    .ItemOneToThirdColumnContainer > .Item:first-of-type {
+        grid-column-start: 3;
+    }
+    
+    .ItemOneToFourthColumnContainer > .Item:first-of-type {
+        grid-column-end: 5;
+
+    }
+
+    .ItemThreeToFirstColumnContainer > .Item:nth-of-type(3){
+        grid-column-start : 1;
+    }
+
+    .ItemFourToSecondColumnContainer > .Item:nth-of-type(4){
+        grid-column-start : 2;
+        background-color : coral;
+    }
+
+    .ItemOneToLastColumnUsingNegatives > .Item:first-of-type {
+
+    }
+
+</style>
+</html>

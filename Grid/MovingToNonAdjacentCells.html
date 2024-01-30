@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reordering Grid Items</title>
+</head>
+<body>
+    <div class="Container ItemThreeToEmptyCellContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div>
+        <div class="Item">4</div><div class="Item">5</div><div class="Item">6</div>
+        <div class="Item">7</div><div class="Item">8</div>
+    </div>
+    <div class="Container ItemSevenMovesItemTwoContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div>
+        <div class="Item">4</div><div class="Item">5</div><div class="Item">6</div>
+        <div class="Item">7</div><div class="Item">8</div>
+    </div>
+    <div class="Container ItemSevenOverlapsTwoContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div>
+        <div class="Item">4</div><div class="Item">5</div><div class="Item">6</div>
+        <div class="Item">7</div><div class="Item">8</div>
+    </div>
+    <div class="Container ItemOneAndFourSwapContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div>
+        <div class="Item">4</div><div class="Item">5</div><div class="Item">6</div>
+        <div class="Item">7</div><div class="Item">8</div>
+    </div>
+    <div class="Container AllItemsDefaultPositionContainer">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div><div class="Item">4</div>
+        <div class="Item">5</div><div class="Item">6</div><div class="Item">7</div><div class="Item">8</div>
+    </div>
+
+    <div class="Container ItemMultipleItemsToFirstRow">
+        <div class="Item">1</div><div class="Item">2</div><div class="Item">3</div><div class="Item">4</div>
+        <div class="Item">5</div><div class="Item">6</div><div class="Item">7</div><div class="Item">8</div>
+    </div>
+</body>
+<style>
+    *{
+        margin:0;
+        padding :0;
+        border : 0;
+        outline : 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: cornsilk;
+        height : 2000px;
+    }
+
+    .Container {
+        background-color : #fff;
+        margin-top: 24px;
+        margin-left : 76px;
+        width : 90%;
+        display : grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 100px);
+        gap : 1px;
+    }
+
+    .Item {
+        background-color : burlywood;
+        padding : 12px;
+    }
+
+    .ItemThreeToEmptyCellContainer,
+    .ItemOneAndFourSwapContainer {
+        grid-template-rows : repeat(3, 100px);
+    }
+
+    .ItemThreeToEmptyCellContainer > .Item:nth-of-type(3) {
+        background-color : coral;
+        grid-column-start : 2;
+        grid-row-start : 3
+    }
+    
+    .ItemSevenMovesItemTwoContainer > .Item:nth-of-type(7){
+        background-color : coral;
+        grid-column-start : 2;
+        grid-row-start : 1;
+        
+    }
+    
+    .ItemSevenOverlapsTwoContainer > .Item:nth-of-type(2),
+    .ItemSevenOverlapsTwoContainer > .Item:nth-of-type(7) {
+        background-color : coral;
+        grid-column-start : 2;
+        grid-row-start : 1;
+    }
+    
+    .ItemSevenOverlapsTwoContainer > .Item:nth-of-type(2) {
+        background-color : coral;
+        z-index: 1;
+    }
+
+    .ItemOneAndFourSwapContainer > .Item:first-of-type {
+        background-color : coral;
+        
+        grid-column-start : 4;
+        grid-row-start : 1;
+    }
+    
+    .ItemOneAndFourSwapContainer > .Item:nth-of-type(4) {
+        background-color : dodgerblue;
+        
+        grid-column-start : 1;
+        grid-row-start : 1;
+    }
+    
+    .AllItemsDefaultPositionContainer > .Item:nth-of-type(3) {
+        background-color : coral;
+        grid-column-start : 4;
+        grid-row-start : 2;
+        
+    }
+    .AllItemsDefaultPositionContainer > .Item:nth-of-type(5){
+        background-color : dodgerblue;
+        grid-column-end : 3;
+        grid-row-end : 2;
+    }
+
+    .AllItemsDefaultPositionContainer > .Item.Item:nth-of-type(3),
+    .AllItemsDefaultPositionContainer > .Item.Item:nth-of-type(5) {
+        grid-column-start : auto;
+        grid-column-end : auto;
+
+        grid-row-start : auto;
+        grid-row-end : auto;
+    }
+</style>
+</html>

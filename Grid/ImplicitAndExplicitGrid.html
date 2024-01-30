@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImplicitAndExplictGri
+    </title>
+</head>
+<body>
+    <div class="Container ExplicitGridContainer">
+        <div class="Item">1</div>
+        <div class="Item">2</div>
+        <div class="Item">3</div>
+        <div class="Item">4</div>
+    </div>
+    <div class="Container ImplicitGridRowsContainer">
+        <div class="Item">1</div>
+        <div class="Item">2</div>
+        <div class="Item">3</div>
+        <div class="Item">4</div>
+    </div>
+    <div class="Container AutoGridRowsContainer">
+        <div class="Item">1</div>
+        <div class="Item">2</div>
+        <div class="Item">3</div>
+        <div class="Item">4</div>
+    </div>
+    <div class="Container ImplicitGridColumnContainer">
+        <div class="Item">1</div>
+        <div class="Item">2</div>
+        <div class="Item">3</div>
+        <div class="Item">4</div>
+    </div>
+</body>
+<style>
+
+    * {
+        padding : 0;
+        margin : 0;
+        border : 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color : bisque;
+        height : 200vh;
+        display : flex;
+        flex-direction: column;
+        justify-content : center;
+    }
+
+    .Container {
+        margin-top : 8px;
+        display: grid;
+        gap : 1px;
+        width : 90%;
+        background-color: #fff;;
+    }
+
+    .Item {
+        background-color: burlywood;
+        padding: 8px;
+    }
+
+    .ExplicitGridContainer {
+        display: grid;
+        grid-template-columns : repeat(2, 1fr);
+        grid-template-rows : repeat(2, 100px);
+    }
+    
+    .ImplicitGridRowsContainer {
+        display: grid;
+        grid-template-columns : repeat(2, 1fr);
+    }
+
+    .AutoGridRowsContainer {
+        display                 : grid;
+        grid-template-columns   : repeat(2, 1fr);
+        grid-template-rows      : 200px;
+        grid-auto-rows          : 100px;
+    }
+
+    .ImplicitGridColumnContainer {
+        display : grid;
+        grid-template-rows : repeat(4, 100px);
+    }
+</style>
+</html>
